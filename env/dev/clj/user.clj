@@ -1,28 +1,28 @@
 (ns user
   "Userspace functions you can run by default in your local REPL."
   (:require
-   [tolgraven.config :refer [env]]
+   [plutonia.config :refer [env]]
     [clojure.pprint]
     [clojure.spec.alpha :as s]
     [clojure.tools.logging :as log]
     [expound.alpha :as expound]
     [mount.core :as mount]
-    [tolgraven.figwheel :refer [start-fw stop-fw cljs]]
-    [tolgraven.handler :as handler]
-    [tolgraven.core :refer [start-app]]))
+    [plutonia.figwheel :refer [start-fw stop-fw cljs]]
+    [plutonia.handler :as handler]
+    [plutonia.core :refer [start-app]]))
 
 (alter-var-root #'s/*explain-out* (constantly expound/printer))
 
 (add-tap (bound-fn* clojure.pprint/pprint)) ; (tap> ) goes to repl, anything else?
 
 (defn start "Starts application.  You'll usually want to run this on startup." []
-  (doseq [component (-> (mount/start-without #'tolgraven.core/repl-server)
+  (doseq [component (-> (mount/start-without #'plutonia.core/repl-server)
                         :started)]
     (log/info component "started"))
   (start-fw))
 
 (defn stop "Stops application." []
-  (doseq [component (-> (mount/stop-except #'tolgraven.core/repl-server)
+  (doseq [component (-> (mount/stop-except #'plutonia.core/repl-server)
                         :stopped)]
     (log/info component "stopped")))
 

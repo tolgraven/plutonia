@@ -1,7 +1,7 @@
-(defproject tolgraven "0.1.0-SNAPSHOT"
+(defproject plugonia "0.1.0-SNAPSHOT"
 
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Plutonia.club website"
+  :url "https://plutonia.club"
 
   :dependencies [[clojure.java-time "1.2.0"]
                  [com.cognitect/transit-clj "1.0.333"]
@@ -108,7 +108,7 @@
   :test-paths ["test/clj"]
   :resource-paths ["resources"]
   :target-path "target/%s/"
-  :main ^:skip-aot tolgraven.core
+  :main ^:skip-aot plutonia.core
 
   :plugins [[lein-cljsbuild "1.1.8"]
             [lein-sassc "0.10.4"]
@@ -121,15 +121,15 @@
             ]
   :sassc
   [{:src "resources/scss/main.scss"
-    :output-to "resources/public/css/tolgraven/main.css"
+    :output-to "resources/public/css/plutonia/main.css"
     :style "nested"
     :import-path "resources/scss"}]
-  :autoprefixer {:src "resources/public/css/tolgraven"
+  :autoprefixer {:src "resources/public/css/plutonia"
                  :browsers "> 5%, Last 2 versions"
-                 :output-to "resources/public/css/tolgraven/main.min.css"} ;; optional
+                 :output-to "resources/public/css/plutonia/main.min.css"} ;; optional
   :auto
   {"sassc" {:file-pattern #"\.(scss|sass)$" :paths ["resources/scss"]}
-   "autoprefixer" {:file-pattern #"\.(css)$" :paths ["resources/public/css/tolgraven"]}}
+   "autoprefixer" {:file-pattern #"\.(css)$" :paths ["resources/public/css/plutonia"]}}
   
   :aliases {"cssbuild" ["do" ["sassc" "once"] "autoprefixer"]}
   ; :aliases {"fig" ["trampoline" "run" "-m" "figwheel.main"]
@@ -145,7 +145,7 @@
   {:http-server-root "public"
    :server-port 4001
    :nrepl-port 7002
-   :ring-handler tolgraven.handler/app-routes ;Embed ring handler in figwheel http-kit server, for simple ring servers, if it doesn't work for you just run your own (see lein-ring)
+   :ring-handler plutonia.handler/app-routes ;Embed ring handler in figwheel http-kit server, for simple ring servers, if it doesn't work for you just run your own (see lein-ring)
    :server-logfile "log/figwheel-logfile.log"
    :wait-time-ms 15
    :css-dirs ["resources/public/css"]
@@ -155,7 +155,7 @@
   {:language :clojurescript
    :output-path "resources/docs/codox"
    :metadata {:doc/format :markdown}
-   :source-uri "https://github.com/tolgraven/tolgraven/blob/master/{filepath}#L{line}"}
+   :source-uri "https://github.com/plutonia/plutonia{filepath}#L{line}"}
 
   :profiles
   {:dev           [:project/dev :profiles/dev]
@@ -189,15 +189,15 @@
                    {:app
                     
                     {:source-paths ["src/cljs" "src/cljc" "env/dev/cljs"]
-                     :figwheel {:on-jsload "tolgraven.core/mount-components"} ; only this bc dev/app calls init! (and more!) which also gets round multi-remount conundrum i solved uglily in cue-db... very reasonable to keep dev things away from general codebase so auto disabled
+                     :figwheel {:on-jsload "plutonia.core/mount-components"} ; only this bc dev/app calls init! (and more!) which also gets round multi-remount conundrum i solved uglily in cue-db... very reasonable to keep dev things away from general codebase so auto disabled
                      :compiler
                      {:output-dir "resources/public/js/compiled/out"
                       :output-to "resources/public/js/compiled/app.js"
                       :asset-path "js/compiled/out"
-                      ; :init-fn tolgraven.core/init!
+                      ; :init-fn plutonia.core/init!
                       
                       ; :modules { 
-                      ;           :app {:entries #{tolgraven.core tolgraven.app}
+                      ;           :app {:entries #{plutonia.core tolgraven.app}
                       ;                  :output-to "resources/public/js/compiled/app.js"} }
                       
                       :language-in     :ecmascript-next
@@ -245,7 +245,7 @@
                         :rich-text-ansi-style-47 "background-color: rgba(128, 128, 128, 0.2)"}}
                       :source-map true
                       :source-map-timestamp true
-                      :main "tolgraven.app" ;what is this why .app? ;; bc env/dev/app.cljs thingy. calls init
+                      :main "plutonia.app" ;what is this why .app? ;; bc env/dev/app.cljs thingy. calls init
                       :pretty-print true}}}} ;} ;}
 
 
@@ -272,7 +272,7 @@
                     {:source-paths ["src/cljc" "src/cljs" "test/cljs"]
                      :compiler
                      {:output-to "target/test.js"
-                      :main "tolgraven.doo-runner"
+                      :main "plutonia.doo-runner"
                       :optimizations :whitespace
                       :pretty-print true}}}}}
 
@@ -296,13 +296,13 @@
                             :pretty-print false
                             :infer-externs true
                             :parallel-build true
-                            :main "tolgraven.app"
+                            :main "plutonia.app"
                             :closure-warnings
                             {:externs-validation :off :non-standard-jsdoc :off}
                             :externs ["react/externs/react.js"]}}}}
 
              :aot :all
-             :uberjar-name "tolgraven.jar"
+             :uberjar-name "plutonia.jar"
              :source-paths ["env/prod/clj"]
              :resource-paths ["env/prod/resources"]}
 
