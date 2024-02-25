@@ -1,6 +1,6 @@
 {:main plutonia.core
  :http-server-root "public"
- :server-port 4001
+ :server-port 4101
  :ring-handler plutonia.handler/app-routes ;Embed ring handler in figwheel http-kit server, for simple ring servers, if it doesn't work for you just run your own (see lein-ring)
  :server-logfile "log/figwheel-logfile.log"
  :nrepl-port 7002

@@ -52,7 +52,7 @@ header {
 }
 
 .fill-side-top {
-  background: linear-gradient(-135deg, var(--bg-1) 10%, var(--blue) 335%);
+  background: linear-gradient(-135deg, var(--bg-3) -20%, var(--blue) 185%);
   width: calc(var(--space-sides) - var(--line-width));
   height: var(--header-height-current);
   transition: height var(--header-expand-time) ease,

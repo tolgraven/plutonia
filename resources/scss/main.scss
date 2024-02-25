@@ -60,7 +60,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Code', monospace;
   // font-family: 'Fira Sans', sans-serif;
   color: var(--fg-1);
   background-color: var(--bg-1);
@@ -117,7 +117,7 @@ main { /* dunno purpose of why I choose .main-content... */
 }
 .main-content {
   position: relative;
-  background: var(--gradient-bg-main);
+  background: var(--bg-0);
   > section:first-of-type { /* top section: no upper border */
     border-top: 0;
   }
@@ -190,7 +190,7 @@ section { /* one main section (img + header + piece of content) */
   position: relative;
   justify-content: center;
   align-items: middle;
-  padding:   var(--space-lg) var(--space-lg); /* for padding-less main: */
+  padding:   var(--space) var(--space); /* for padding-less main: */
   border-top: var(--line-width) solid var(--line-color);
   
   h1 {

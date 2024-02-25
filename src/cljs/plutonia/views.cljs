@@ -65,41 +65,50 @@
         updater-2 (fn update-2 []
                     (let [frac (/ (count title)
                                   (swap! showing-title inc))
-                          time-next (+ 25 (* @showing-title 18)
+                          time-next (+ 225 (* @showing-title 78)
                                        (when (= (nth title (dec @showing-title)) " ")
                                          500)
                                        (when (= @showing-title (dec (count title)))
                                          600))]
                     (when-not (= @showing-title (count title))
-                      (js/setTimeout update-2 time-next))))]
+                      (js/setTimeout update-2 time-next))))
+        title-anim (fn []
+                     [:<>
+                      (doall (for [line title]
+                       [:div.title-line
+                        (if (< @showing-title 1)
+                          "•"
+                          (map-indexed
+                           (fn [i letter]
+                             (with-meta
+                              [ui/appear-merge "opacity slide-in" [:span letter]]
+                              {:key (str "intro-letter-" i)}))
+                           (take @showing-title line)))]))])]
     (fn [{:keys [title text buttons logo-bg bg]}]
      [:section#intro
-     [bg-logo logo-bg]
+     ; [bg-logo logo-bg]
      [:img#top-banner.media.media-as-bg (first bg)]
 
      [:div.h1-wrapper.center-content
       [:h1.h-responsive.h-intro
-      [anim/timeout updater-2 2000]
-      (if (< @showing-title 1)
-        "•"
-        (map-indexed
-         (fn [i letter]
-           (with-meta
-            [ui/appear-merge "opacity" [:span letter]]
-            {:key (str "intro-letter-" i)}))
-         (take @showing-title title)))]]
+       [anim/timeout updater-2 2500]
+       [title-anim]]
+      #_[:img {:src "/img/plutonia-logo-small.heic.jpg"
+              :style {:height "1em" :width "1em"}}]]
      
+     [:br]
      (into [:<>] (ln->br text)) ; or just fix :pre css lol
      [:br]
      [:div.buttons
       (for [[text what] buttons] ^{:key (str "intro-button-" text)}
-        [:button
+        [ui/appear-merge "slide-in"
+         [:button
           {:on-click (when (vector? what)
                         #(rf/dispatch what)) }
           [:div {:class "blur-bg"}]
           (if (string? what)
             [:a {:href what} text]
-            [:label text])])]])))
+            [:label text])]])]])))
 
 
 (defn ui-interlude "Banner across with some image or video or w/e
@@ -125,8 +134,10 @@
                                control-time))))))
         on-change (fn [frac]
                     (reset! in-view frac)
-                    (when (<= frac 0.35)
-                      (do-control :pause)))
+                    (if (<= frac 0.35)
+                      (do-control :pause)
+                      (when (>= frac 0.95)
+                        (do-control :play))))
         observer (util/observer on-change)]
     (fn [interludes nr]
      (let [{:keys [title caption bg]} (get interludes nr)]
@@ -346,24 +357,21 @@
                  :content :moneyshot}
    :story       {:component ui-story
                  :content :story}
-   :gallery     {:component ui-gallery
-                 :content :gallery
-                 :dep :site
-                 :init [:state [:gallery :loaded] true]}
+   ; :gallery     {:component ui-gallery
+   ;               :content :gallery
+   ;               :dep :site
+   ;               :init [:state [:gallery :loaded] true]}
    :soundcloud  {:component ui-soundcloud
                  :dep :site
                  :init [:booted :soundcloud]}
-   :strava      {:component strava/strava
-                 :dep :firebase
-                 :init [:strava/init]}
    :instagram   {:component instagram/instagram
                  :dep :firebase
                  :init [:instagram/init]}
-   :github      {:component github/commits
-                 :dep :site
-                 :init [:github/init "plutonia" "tolgraven"]} ; should inject, how?
-   :gpt         {:component gpt/threads}
-   :chat        {:component chat/chat}
+   ; :github      {:component github/commits
+   ;               :dep :site
+   ;               :init [:github/init "tolgraven" "plutonia"]} ; should inject, how?
+   ; :gpt         {:component gpt/threads}
+   ; :chat        {:component chat/chat}
    :interlude   {:component ui-interlude
                  :content :interlude}
    :init        {:component run-init}})
@@ -372,23 +380,21 @@
   {:main [:intro
           [:interlude 0]
           :services
-          [:init :services] ; just focuses it
+          ; [:init :services] ; just focuses it
           [:interlude 1]
           :moneyshot
-          [:init :instagram]
-          [:init :strava]
+          ; [:init :instagram]
           :story
-          [:interlude 2]
+          ; [:interlude 2]
 
-          [:init :soundcloud]
+          ; [:init :soundcloud]
 
-          :strava
-          [:init :gallery]
-          :instagram
-          :gallery
-          :github
+          ; [:init :gallery]
+          ; :instagram
+          ; :chat
+          ; :gallery
           #_:gpt
-          :chat ]})
+          #_:github ]})
 
 
 (defn get-components "Get component, and its init event runner, if any."

@@ -299,7 +299,7 @@
 .anim-gradient-bg {
   --opacity: 1.00;
   --deg: -40deg;
-  --color-1: hsla(var(--hue-1),  39%,  var(--lum-bg-3), var(--opacity));
+  --color-1: hsla(var(--hue-4),  49%,  var(--lum-bg-4), var(--opacity));
   --color-2: hsla(var(--hue-2),  35%,  var(--lum-bg-3), var(--opacity));
   /* background: linear-gradient(-30deg, var(--color-1), var(--bg-1)); */
   background: linear-gradient(var(--deg), var(--color-1), var(--color-2));

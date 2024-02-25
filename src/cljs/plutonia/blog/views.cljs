@@ -511,7 +511,7 @@
     
    [:div.blog-powered-by.center-content
     [:p "Proudly powered by "
-    [:a {:href "https://github.com/plutonia/tolgraven"} "tolgrAVen"]
+    [:a {:href "https://github.com/tolgraven/tolgraven"} "tolgrAVen"]
     [:i.fab.fa-github]]]])
 
 

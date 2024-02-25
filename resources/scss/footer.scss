@@ -40,7 +40,7 @@ footer {
     border-top: var(--line-width) solid var(--line-color);
   }
   &:before {  
-    background: linear-gradient(35deg, var(--bg-1), var(--blue) 335%);
+    background: linear-gradient(35deg, var(--bg-3) -20%, var(--blue) 185%);
     width: calc(var(--space-sides) - var(--line-width));
     left: calc(0px - var(--space-sides));
   }

@@ -1,7 +1,7 @@
-{:projectId     "tolgraven-8fd35"
- :authDomain    "tolgraven-8fd35.firebaseapp.com"
- :databaseURL   "https://tolgraven-8fd35.firebaseio.com"
- :storageBucket "tolgraven-8fd35.appspot.com"
- :messagingSenderId "506323024574",
- :appId             "1:506323024574:web:dd4124cc6018a121bf7cef",
- :measurementId     "G-Y8H6RLZX3V"}
+{:apiKey "AIzaSyDuKXkn6BFqdWAHdLHofJL_cImm34j_4QU",
+ :authDomain "plutonia-d41f9.firebaseapp.com",
+ :projectId "plutonia-d41f9",
+ :storageBucket "plutonia-d41f9.appspot.com",
+ :messagingSenderId "789731516162",
+ :appId "1:789731516162:web:57d6417718c89b17946c1b",
+ :measurementId "G-VSDDNX3R6R"}

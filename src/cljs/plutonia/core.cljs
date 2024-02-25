@@ -449,7 +449,7 @@
 
 (defn init "Called only on page load" []
   (rf/dispatch-sync [:init-db])
-  (rf/dispatch-sync [:fb/fetch-settings]) ;sync because number of early fetches depend on this...
+  ; (rf/dispatch-sync [:fb/fetch-settings]) ;sync because number of early fetches depend on this...
   (rf/dispatch      [::bp/set-breakpoints
                      :breakpoints [:mobile 560
                                    :tablet 992

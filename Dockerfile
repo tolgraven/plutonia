@@ -9,4 +9,4 @@ COPY ./ /clj
 COPY --from=0 /usr/src/app/resources/ /clj/resources
 RUN lein uberjar
 EXPOSE 3000
-CMD ["java", "-Dclojure.main.report=stderr", "-cp", "target/uberjar/tolgraven.jar", "clojure.main", "-m", "tolgraven.core"]
+CMD ["java", "-Dclojure.main.report=stderr", "-cp", "target/uberjar/plutonia.jar", "clojure.main", "-m", "plutonia.core"]

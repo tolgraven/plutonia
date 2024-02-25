@@ -1,3 +1,3 @@
-dev: lein with-profile dev trampoline run -m tolgraven.core
-stage: lein with-profile stage run -m tolgraven.core
-web: java -Dclojure.main.report=stderr -cp target/uberjar/tolgraven.jar clojure.main -m tolgraven.core
+dev: lein with-profile dev trampoline run -m plutonia.core
+stage: lein with-profile stage run -m plutonia.core
+web: java -Dclojure.main.report=stderr -cp target/uberjar/plutonia.jar clojure.main -m plutonia.core

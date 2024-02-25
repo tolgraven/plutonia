@@ -135,16 +135,16 @@
                   (assoc-in [:proxy] true)))
             #_(assoc-in [:security :anti-forgery] true) ; what's with this? from before we injected csrf or?
             )) ; why was there a dissoc :session? cause it's about what middleware we request to wrap us with. cause gotta choose either above or through defaults... get duplicate session warnings now that uncommented hmm.
-      (wrap-resource "public" {:prefer-handler? true}) ; hopefully fixes gzipping of images and shit causing 50% ballooning of sizes :O
+      ; (wrap-resource "public" {:prefer-handler? true}) ; hopefully fixes gzipping of images and shit causing 50% ballooning of sizes :O
       ; (wrap-file "resources/public" {:prefer-handler? true}) ; hopefully fixes gzipping of images and shit causing 50% ballooning of sizes :O
       wrap-optimus
       wrap-content-type ; must go after wrap-resource. checks file ext and adds correct content type
       ; gzip/wrap-gzip
-      wrap-gzip-content-aware
+      ; wrap-gzip-content-aware
       ; (wrap-log "Wrapped gzip")
       wrap-not-modified ; guess this doesnt work cause optimus gens new files tho..
       ; (wrap-csp {:policy csp})
-      wrap-partial-content
+      ; wrap-partial-content
       wrap-multipart-params
       wrap-formats
       ; wrap-with-logger

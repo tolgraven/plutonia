@@ -5,11 +5,11 @@
   /* SIZES */
   --space-static:      1.2rem;
   --space-lg-static:   2.0rem;
-  --space:             1.2rem;
-  --space-lg:          2.0rem;
-  --space-sides:       var(--space-lg); /* inner horizontal margin */
+  --space:             1.3rem;
+  --space-lg:          2.1rem;
+  --space-sides:       var(--space); /* inner horizontal margin */
   --space-edges:       var(--space-sides); /* size of outer edges  */
-  --space-top:         2rem; /* top margin above header */
+  --space-top:         3rem; /* top margin above header */
   --media-width-main: calc(100vw - 2 * var(--space-edges) - 2 * var(--line-width)); /* would it be context dependent or just use root 100% i guess uh */
   --banner-height:     600px;
   --logo-ratio:        0.3710; /* lol, 41.25 actual ratio, 40.6 works on chrome desktop, 40.0 on safari ios... */ /* just use img... */ /* or make logo look like i want in first place - needs higher-res or vector bounce anyways. then suddenly had to change to 3710... */
@@ -24,14 +24,14 @@
   --link-offset:         calc( var(--header-height-current));
   --menu-width-fraction: 0.70;
 
-  --comment-gap:         calc(0.20 * var(--space));
+  --comment-gap:         calc(0.40 * var(--space));
 
   --line-scale-factor: 0.5;
-  --line-width:        2.0px; /* main design line/border width */ /* 0.125 normally 2px but nah ends up weird when font scales to like 1.67 and shize */
+  --line-width:        0.5px; /* main design line/border width */ /* 0.125 normally 2px but nah ends up weird when font scales to like 1.67 and shize */
   --line-width-sm:     calc(1 / (1.5 + var(--line-scale-factor)) * var(--line-width)); /* main design line/border width */ /* 0.125 normally 2px but nah ends up weird when font scales to like 1.67 and shize */
   --line-width-md:     calc(((1 + var(--line-scale-factor)) / 2) * var(--line-width)); /* main design line/border width */ /* 0.125 normally 2px but nah ends up weird when font scales to like 1.67 and shize */
   --line-width-lg:     calc(1 / (1 + var(--line-scale-factor)) * var(--line-width)); /* main design line/border width */ /* 0.125 normally 2px but nah ends up weird when font scales to like 1.67 and shize */
-  --line-width-vert:   2px; /* main design line/border width */ /* 0.125 normally 2px but nah ends up weird when font scales to like 1.67 and shize */
+  --line-width-vert:   0.5px; /* main design line/border width */ /* 0.125 normally 2px but nah ends up weird when font scales to like 1.67 and shize */
   --scale:             1.0; /* px line-width drifts when font scales so must compensate... better way? */
   --section-rounded:   0%;
   

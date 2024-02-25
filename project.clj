@@ -143,8 +143,8 @@
    "resources/public/js/compiled/app.js"]
   :figwheel
   {:http-server-root "public"
-   :server-port 4001
-   :nrepl-port 7002
+   :server-port 4101
+   :nrepl-port 7004
    :ring-handler plutonia.handler/app-routes ;Embed ring handler in figwheel http-kit server, for simple ring servers, if it doesn't work for you just run your own (see lein-ring)
    :server-logfile "log/figwheel-logfile.log"
    :wait-time-ms 15
@@ -197,7 +197,7 @@
                       ; :init-fn plutonia.core/init!
                       
                       ; :modules { 
-                      ;           :app {:entries #{plutonia.core tolgraven.app}
+                      ;           :app {:entries #{plutonia.core plutonia.app}
                       ;                  :output-to "resources/public/js/compiled/app.js"} }
                       
                       :language-in     :ecmascript-next
@@ -254,7 +254,7 @@
                   :resource-paths ["env/dev/resources"]
                   :repl-options {:welcome (println "in DEV profile")
                                  :init-ns user
-                                 :port 7000
+                                 :port 7100
                                  :init (start)
                                  ; :init (do
                                  ;        (require 'dirac.agent)
