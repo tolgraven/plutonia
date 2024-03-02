@@ -60,14 +60,17 @@
              :story {:heading {:title "Our story"
                                :bg {:src "img/4.heic.jpg"}}
                      :title "It started with a dream"
-                     :text "Someone needs to write some good as copy for this part!
-                            That goes on and on and on.
-                            Like seriously long..."
+                     :text "Plutonia started as an idea in 2021, and was realized at Borderland 2022.
+                            The old machine hall transformed into a serious club.
+                            For 2023 we already have the hard parts done, and will continue the project, building upon what we already have.
+                            And so it will go - each year new projects within the project, experiments within the experiment.
+                            Who we are is unimportant, we welcome you whether as a guest or member.
+                            Anyways, yada yada yada, vote for our Dreams and give us money yo"
 
-                     :images [["Borderland" {:src "img/logo/Borderland-logo-2019.png" :alt "Joen"}
+                     :images [["Borderland" {:src "img/logo/Borderland-logo-2019.png" :alt "Borderland logo"}
                                "Our overlords."]
-                              ["cljs" {:src "img/cljs.png" :alt "cljs"}
-                               "clojurescript in the house"] ]}
+                              ["Plutonia" {:src "img/plutonia-logo-small.heic.jpg" :alt "plutonia logo"}
+                               "Plutonic laser"] ]}
 
              :interlude [{:title "What we do"
                           :caption "Mad donkadonk"
@@ -198,13 +201,12 @@
                                     {:name "Facebook" :href "https://facebook.com/plutonia" :info "plutonia"}
                                     {:name "Soundcloud" :href "https://soundcloud.com/tolgraven" :info "tolgraven"}]}
                            {:id "third"
-                            :title "Website and lights"
+                            :title "Website (and some of the lights)"
                             :text ["by tolgrAVen audiovisual"
-                                   "https://tolgraven.se"]
-                            :img [{:src "img/logo/icon/clojure-logo-icon.png" :alt "clojure logo"}
-                                  {:src "img/logo/icon/react-logo-icon.png" :alt "react logo"}
-                                  {:src "img/logo/icon/sass-logo-icon.png" :alt "sass logo"}
-                                  {:src "img/logo/icon/re-frame-logo.png" :alt "re-frame logo"}]}]}
+                                   [:a {:href "https://tolgraven.se"}
+                                    "tolgraven.se"]]
+                            :img [{:src "img/logo/Borderland-logo-2019.png" :alt "borderland logo"}
+                                  {:src "img/logo/icon/react-logo-icon.png" :alt "react logo"}]}]}
 
    :options {:auto-save-vars true
              :transition {:time 500 :style :slide} ; etc

@@ -5,7 +5,7 @@
 .burger {
   position: relative;
   cursor: pointer;
-  border-bottom: calc(2 * var(--line-width)) solid; /* LOWER BUN */
+  border-bottom: 0.2em solid; /* LOWER BUN */
   --height: 1.5rem;
   height: var(--height);
   min-width: var(--height);
@@ -20,10 +20,10 @@
     transition: transform 0.5s ease-in-out;
   }
   &:before { /* UPPER BUN */
-    border-bottom: calc(2 * var(--line-width)) solid; /* UPPER BUN */
+    border-bottom: 0.2em solid; /* UPPER BUN */
   }
   &:after {
-    border-top: calc(2 * var(--line-width)) solid; /* UPPER BUN */
+    border-top: 0.2em solid; /* UPPER BUN */
     margin-top: calc(0.5 * var(--height) - var(--line-width));
   }
 }

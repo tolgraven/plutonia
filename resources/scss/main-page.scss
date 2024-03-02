@@ -21,7 +21,11 @@
   --line-percent: 130%;
   
   p {
-    padding: 0 var(--space-lg);
+    padding: 0 calc(2 * var(--space-lg));
+
+    &:last-of-type {
+      text-align: end;
+    }
   }
   .h-intro {
     position: relative;

@@ -65,7 +65,7 @@
         updater-2 (fn update-2 []
                     (let [frac (/ (count title)
                                   (swap! showing-title inc))
-                          time-next (+ 225 (* @showing-title 78)
+                          time-next (+ 100 (* @showing-title (+ 10 (rand 90)))
                                        (when (= (nth title (dec @showing-title)) " ")
                                          500)
                                        (when (= @showing-title (dec (count title)))

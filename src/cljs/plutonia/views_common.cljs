@@ -93,11 +93,11 @@
               :top "0%"}}]
     
     [:div.header-icons
-     [:a {:href @(rf/subscribe [:href :blog])}
+     #_[:a {:href @(rf/subscribe [:href :blog])}
      [:button.blog-link-btn.noborder.nomargin
       {:title "My blog"}
       [:i.fa.fa-pen-fancy]]]
-    [:a {:href @(rf/subscribe [:href-add-query  
+    #_[:a {:href @(rf/subscribe [:href-add-query  
                                {:settingsBox (not @(rf/subscribe [:state [:settings :panel-open]]))}])}
      [:button.settings-btn.noborder.nomargin
       [:i.settings-btn {:class "fa fa-cog"}]]]

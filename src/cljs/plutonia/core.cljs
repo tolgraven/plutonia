@@ -171,7 +171,7 @@
    
    [ui/zoom-to-modal :fullscreen]
    [ui/safe :user [user/user-section @(rf/subscribe [:user/active-section])]]
-   [ui/safe :settings [common/settings]]
+   ; [ui/safe :settings [common/settings]]
    [ui/safe :search [search/ui]]
    (if-let [error-page @(rf/subscribe [:state [:error-page]])] ; do it like this as to not affect url. though avoiding such redirects not likely actually useful for an SPA? otherwise good for archive.org check hehe
      [:main.main-content.perspective-top
@@ -184,7 +184,7 @@
            [ui/safe :page [page]]
            (when page-prev
              [ui/safe :page-prev [page-prev]])]])
-       #_[ui/loading-spinner true :massive])) ; removed since jars now that have hero in original html
+       [ui/loading-spinner true :massive])) ; removed since jars now that have hero in original html
 
    [common/footer-full @(rf/subscribe [:content [:footer]])]
    [common/footer @(rf/subscribe [:content [:footer]])]

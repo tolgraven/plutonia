@@ -12,11 +12,11 @@ header {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg-1);
+  background-color: var(--main-background);
   z-index: 100;
   margin-top: var(--space-top);
   margin-right: var(--line-width); /* make main right border stay "outside" right edge of header, needed because of particular effect/design... */
-  padding: 0 calc(var(--space));
+  padding: 0 0 0 calc(var(--space));
   transition: all var(--header-expand-time) ease,
               background 0.0s ease;
               
@@ -75,9 +75,10 @@ header {
 .header-icons {
   display: flex;
   flex: 0.5 0 auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 72%;
+  margin-right: var(--space);
 }
 
 menu {
@@ -110,13 +111,14 @@ nav {
   flex: 1 2 auto;
   min-height: 2.2em; /* h1 */ /* dont think right basing on space, just use rem */
   max-height: var(--space);
-  max-width: calc(2 * var(--space-lg));
-  background: linear-gradient(-77deg, var(--bg-1) -10%, var(--nav-accent) 80%);
+  max-width: calc(1 * var(--space-lg));
+  background: linear-gradient(-77deg, var(--purple) -10%, var(--bg-6) 80%);
   border-top:     var(--line-width-sm) solid  var(--line-color);
+  filter: brightness(70%);
   
   transition: filter 0.5s ease-out;
   &:hover {
-    filter: brightness(140%);
+    filter: brightness(120%);
   }
 }
   
@@ -170,7 +172,13 @@ menu > nav > .nav-section:last-of-type > .nav-links {
     font-size: 0.70em;
     line-height: 0.50em;
     margin: 0;
+    margin-bottom: -0.3em;
     padding: 0;
+
+    p {
+      text-align: start;
+      color: var(--fg-4);
+    }
   }
 }
 
@@ -225,7 +233,8 @@ menu > nav > .nav-section:last-of-type > .nav-links {
     position: absolute;
     flex-direction: column;
     bottom: calc(1.5 * var(--space-top));
-    right: 0.0em;
+    right: 0;
+    font-size: 150%;
   }
 
   .line {
@@ -348,6 +357,10 @@ menu > nav > .nav-section:last-of-type > .nav-links {
 
           &:first-letter {
             font-size: 1.2em;
+          }
+
+          a {
+            color: var(--bg-2);
           }
         }
       }
