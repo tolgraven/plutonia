@@ -162,10 +162,10 @@
   (render-hiccup
    home
    request
-   :loading-content (basic-skeleton "plutonia" ["audio" "visual"]
-                                    "img/foggy-shit-small.jpg") ; uh obviously not for any page though, like blog and whatnot...
-   :title "plutonia audiovisual"
-   :description "plutonia audiovisual by Joen Tolgraven"
+   :loading-content (basic-skeleton "plutonia" ["border" "land"]
+                                    "nope") ; uh obviously not for any page though, like blog and whatnot...
+   :title "plutonia"
+   :description "plutonia the experience"
    :pre-pre pre-paths
    :css-paths css-paths
    :js-paths js-paths
@@ -173,7 +173,7 @@
    :css-pre css-pre
    :js-pre js-pre
    :img-pre img-pre
-   :title-img "img/logo/plutonia-logo.png"
+   :title-img "img/plutonia-logo-small.heic.jpg"
    :anti-forgery (force *anti-forgery-token*)))
 ; (defn render-home
 ;   [request]

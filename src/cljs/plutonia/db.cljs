@@ -25,12 +25,10 @@
                         :email "plutonia@tolgraven.se"}
              :header {:text ["plutonia" ["border" "land"]]
                       :text-personal ["plutonia" ["club" "venue"]]
-                      :menu {:work  [["Services"  "services"  :services] ; should have two sections either by collapse
-                                     ["Story"     "about"        :about]         ; or just opp sides with the /
+                      :menu {:work  [["Story"     "about"        :about]         ; or just opp sides with the /
                                      ["Work with us"   "hire"         :hire]
                                      ["Schedule"        "cv"            :cv]]
                              :personal [["Blog"      "/blog"     :blog]
-                                        ["Docs"      "/docs"     :docs]
                                         ["Test"      "/test"     :test]
                                         ["Log"       "/log"      :log]]} }
              :intro {:title ["PLU"
