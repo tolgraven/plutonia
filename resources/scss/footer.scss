@@ -105,6 +105,7 @@ img.img-icon {
   .footer-column {
     margin: var(--space) var(--space-lg) 0.0rem 0.5em;
     flex: 1 0 auto;
+    max-width: fit-content;
 
     &:last-of-type {
       margin-bottom: var(--space-lg);

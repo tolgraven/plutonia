@@ -61,8 +61,8 @@
   --main-background:   var(--bg-2);
 
   /* COLORS */
-  --hue-1:             180; 
-  --hue-2:               8;
+  --hue-1:             131; 
+  --hue-2:             248;
   --hue-3:             192;
   --hue-4:             218;
   --hue-5:             290;
@@ -173,18 +173,18 @@
   
 
   --dark-base-0:     var(--hue-1),  5%,  0%;
-  --dark-base-1:     var(--hue-1),  7%,  var(--lum-dark-1);
-  --dark-base-1-2:   var(--hue-1),  7%,  var(--lum-dark-1-2);
-  --dark-base-2:     var(--hue-3),  7%,  var(--lum-dark-2);
-  --dark-base-2-2:   var(--hue-3),  7%,  var(--lum-dark-2-2);
-  --dark-base-3:     var(--hue-2),  7%,  var(--lum-dark-3);
-  --dark-base-3-2:   var(--hue-2),  7%,  var(--lum-dark-3-2);
-  --dark-base-4:     var(--hue-2),  7%,  var(--lum-dark-4);
-  --dark-base-4-2:   var(--hue-2),  7%,  var(--lum-dark-4-2);
-  --dark-base-5:     var(--hue-2),  7%,  var(--lum-dark-5);
-  --dark-base-5-2:   var(--hue-2),  7%,  var(--lum-dark-5-2);
-  --dark-base-6:     var(--hue-3),  7%,  var(--lum-dark-6);
-  --dark-base-6-2:   var(--hue-3),  7%,  var(--lum-dark-6-2);
+  --dark-base-1:     var(--hue-1),  9%,  var(--lum-dark-1);
+  --dark-base-1-2:   var(--hue-1),  9%,  var(--lum-dark-1-2);
+  --dark-base-2:     var(--hue-3),  9%,  var(--lum-dark-2);
+  --dark-base-2-2:   var(--hue-3),  9%,  var(--lum-dark-2-2);
+  --dark-base-3:     var(--hue-2),  9%,  var(--lum-dark-3);
+  --dark-base-3-2:   var(--hue-2),  9%,  var(--lum-dark-3-2);
+  --dark-base-4:     var(--hue-2),  9%,  var(--lum-dark-4);
+  --dark-base-4-2:   var(--hue-2),  9%,  var(--lum-dark-4-2);
+  --dark-base-5:     var(--hue-2),  9%,  var(--lum-dark-5);
+  --dark-base-5-2:   var(--hue-2),  9%,  var(--lum-dark-5-2);
+  --dark-base-6:     var(--hue-3),  9%,  var(--lum-dark-6);
+  --dark-base-6-2:   var(--hue-3),  9%,  var(--lum-dark-6-2);
   
   --dark-0:     hsl(var(--dark-base-0));
   --dark-1:     hsl(var(--dark-base-1));
@@ -208,12 +208,12 @@
   --box-faint-color-flip:      hsla(0, 0%, var(--lum-light-1), var(--opacity-faint));
   --box-bright-heavy:     hsla(var(--hue-1), 20%, var(--lum-fg-1), 0.5);
 
-  --line-color:           hsla(0, 0%, 60%, 1.0); // color of borders etc
+  --line-color:           hsla(0, 0%, 40%, 1.0); // color of borders etc
 
   // will need drastic tweaking for light theme
-  --gradient-bg-main: linear-gradient(-77deg,
+  --gradient-bg-main: linear-gradient(-177deg,
                                       hsl(280, 15%, 8%),
-                                      var(--bg-1));
+                                      var(--bg-2) 90%);
   // --gradient-bg-main: linear-gradient(-77deg,
   //                                     hsl(280, 20%, var(--lum-bg-1)),
   //                                     hsl(100, 11%, var(--lum-bg-1)));

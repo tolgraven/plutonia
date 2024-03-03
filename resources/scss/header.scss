@@ -337,6 +337,12 @@ menu > nav > .nav-section:last-of-type > .nav-links {
       max-height: var(--header-with-menu-height); /* for animation purposes i guess */
       max-width: unset;
       border: 0;
+
+      &:hover {
+        a {
+          color: var(--bg-2);
+        }
+      }
       
       .nav-links {
         position: relative;
@@ -360,7 +366,7 @@ menu > nav > .nav-section:last-of-type > .nav-links {
           }
 
           a {
-            color: var(--bg-2);
+            color: var(--fg-2);
           }
         }
       }

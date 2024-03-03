@@ -198,7 +198,9 @@
              :post-footer [{:id "left"
                             :title "Inquiries"
                             :text ["Contact us and let's discuss your idea!"
-                                   "Whether you want to join the crew, have a project in mind or just want to say hi."]}
+                                   "Whether you want to join the crew,
+                                    have a project in mind
+                                    or just want to say hi."]}
                            {:id "right"
                             :title "Links"
                             :links [{:name "Instagram" :href "https://instagram.com/plutonia" :info "plutonia"}

@@ -10,7 +10,7 @@
 .fade-to-black { /* well this is certainly a misnomer. .fade-to? */
   position: absolute;
   width: 100%;
-  --fade-to-color: var(--bg-1);
+  --fade-to-color: var(--bg-3);
   transition: all 0.5s ease;
 
   &.tall {
@@ -46,7 +46,7 @@
 }
 .fade-to-black.light-from-below {
   background: linear-gradient(180deg, transparent 0%,
-      hsl(var(--hue-2), 8%, var(--lum-light-2)) 120%);
+      hsl(var(--hue-2), 80%, var(--lum-light-2)) 120%);
   --height: 25vh; // problem attic but cant just put percentage then get nothing
   height: calc(var(--height));
   bottom: 0;
