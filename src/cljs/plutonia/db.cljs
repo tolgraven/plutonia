@@ -75,7 +75,7 @@
              :interlude [{:title "What we do"
                           :caption "Mad donkadonk"
                           :bg [:video.media.media-as-bg
-                               {:src "media/snutt-small.mov" :playsInline true :autoPlay true :muted true } ]}
+                               {:poster "media/snutt-poster.jpg" :src "media/snutt-small.mov" :playsInline true :autoPlay true :muted true } ]}
                          {:title "What you do"
                           :caption "...with it"
                           :bg [:img.media.media-as-bg
