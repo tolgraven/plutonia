@@ -65,7 +65,9 @@
                             For 2023 we already have the hard parts done, and will continue the project, building upon what we already have.
                             And so it will go - each year new projects within the project, experiments within the experiment.
                             Who we are is unimportant, we welcome you whether as a guest or member.
-                            Anyways, yada yada yada, vote for our Dreams and give us money yo"
+                            Anyways, yada yada yada, vote for our Dreams and give us money yo.
+                            More copy more copy more copy lorem ipsum yada heyo swag swag swag banana and maybe let's have chatgpt fill this in for now idunno what to wriiiite shit man. Could I BE any more uninspired? Unclear.
+                            More copy more copy more copy lorem ipsum yada heyo. More copy more copy more copy lorem ipsum yada heyo. More copy more copy more copy lorem ipsum yada heyo swag swag swag banana and maybe let's have chatgpt fill this in for now idunno what to wriiiite shit man. Could I BE any more uninspired? Unclear."
 
                      :images [["Borderland" {:src "img/logo/Borderland-logo-2019.png" :alt "Borderland logo"}
                                "Our overlords."]
