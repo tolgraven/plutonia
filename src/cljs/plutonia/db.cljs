@@ -70,7 +70,9 @@
                      :images [["Borderland" {:src "img/logo/Borderland-logo-2019.png" :alt "Borderland logo"}
                                "Our overlords."]
                               ["Plutonia" {:src "img/plutonia-logo-small.heic.jpg" :alt "plutonia logo"}
-                               "Plutonic laser"] ]}
+                               "Plutonic laser"]
+                              ["Control panel" {:src "img/plutonia-control-panel.png" :alt "plutonia control panel"}
+                               "Plutonic control panel"]]}
 
              :interlude [{:title "What we do"
                           :caption "Mad donkadonk"
